@@ -1,0 +1,23 @@
+{
+  "name": "tinderauto",
+  "version": "1.0.0",
+  "description": "test automation for tinder",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dinerville/tndrAuto.git"
+  },
+  "keywords": [
+    "tinder",
+    "automation"
+  ],
+  "author": "d.naumov@a1qa.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dinerville/tndrAuto/issues"
+  },
+  "homepage": "https://github.com/Dinerville/tndrAuto#readme"
+}

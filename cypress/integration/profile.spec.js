@@ -1,23 +1,25 @@
 'use strict';
 /// <reference types="Cypress" />
 
-describe('Assessment for Tinder Web',()=>{
+describe('Profile tests',()=>{
+    
     beforeEach(()=>{
         cy.visitAndLogin()
     })
-    it('Change user profile on front-end only',function(){
+
+
+    it('Change user profile on front-end only',()=>{
         const bioToSet = "I'm from here"
         const stubbedBio = 'stubbed bio'
-        cy.fixture('credentials').then((creds)=>{
-            cy.fixture('responses/users').then((userResp)=>{
-                userResp.data.attributes.bio = stubbedBio
+
+        let prom = cy.fixture('credentials').then((creds)=>{
                 cy.visit(`/u/${creds.username}`)
                 cy.server()
                 cy.route({
                     url: '/api/users/*',
                     method: 'POST',
                     status: 200,
-                    response: userResp
+                    response: 'fixture:responses/users'
                 }).as('users')
                 cy.route({
                     url:'/api/pusher/auth',
@@ -41,7 +43,6 @@ describe('Assessment for Tinder Web',()=>{
                 cy.visit(`/u/${creds.username}`)
                 cy.wait('@getSavedUser')
                 cy.get('.UserBio-content>p').should('contain',stubbedBio)  
-            })
         })
     })
 })

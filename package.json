@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cypress run",
     "cypress": "cypress open"
+    
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,6 @@
   },
   "homepage": "https://github.com/Dinerville/tndrAuto#readme",
   "dependencies": {
-    "cypress": "3.7.0"
+    "cypress": "^3.5.0"
   }
 }

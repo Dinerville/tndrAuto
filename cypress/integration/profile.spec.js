@@ -12,7 +12,7 @@ describe('Profile tests',()=>{
         const bioToSet = "I'm from here"
         const stubbedBio = 'stubbed bio'
 
-        let prom = cy.fixture('credentials').then((creds)=>{
+        cy.fixture('credentials').then((creds)=>{
                 cy.visit(`/u/${creds.username}`)
                 cy.server()
                 cy.route({

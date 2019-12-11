@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Dinerville/tndrAuto#readme",
   "dependencies": {
-    "cypress": "^3.5.0"
+    "cypress": "3.7.0"
   },
   "devDependencies": {
     "eslint": "^6.7.2",

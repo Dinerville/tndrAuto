@@ -23,6 +23,24 @@ Cypress.Commands.add('initRouteAs', (route, name, payload) => {
         response: 'fixture:responses/posts',
       }).as(name);
       break;
+    case 'not.stubbed.posts':
+      cy.route({
+        url: '/api/posts',
+        method: 'POST',
+      }).as(name);
+      break;
+    case 'not.stubbed.discussionsGet':
+      cy.route({
+        url: '/api/discussions/*',
+        method: 'GET',
+      }).as(name);
+      break;
+    case 'not.stubbed.discussionsPost':
+      cy.route({
+        url: '/api/discussions/*',
+        method: 'POST',
+      }).as(name);
+      break;
     default:
       cy.log(`No routes initialized, but expected to initialize ${route}`);
   }

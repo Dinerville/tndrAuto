@@ -1,5 +1,4 @@
-'use strict';
-
+'use strict'
 /**
  * Logins to the application
  *

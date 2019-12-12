@@ -1,5 +1,4 @@
-'use strict';
-
+'use strict'
 describe('Discussions tests', () => {
   beforeEach(() => {
     cy.visitAndLogin();

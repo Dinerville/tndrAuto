@@ -12,11 +12,8 @@ describe('Profile tests', () => {
     cy.navigateToProfile(this.creds.username);
     cy.server();
     cy.initRouteAs('stubbed.users', 'users', { userId: this.creds.id });
-    cy.initRouteAs('not.stubbed.pusher', 'pusher');
     cy.initRouteAs('stubbed.posts', 'getSavedUser');
-    cy.get('.UserBio-content').click();
-    cy.wait('@pusher');
-    cy.get('.editing > .FormControl').clear().type(bioToSet).type('{enter}');
+    cy.setProfileBio(bioToSet);
     cy.wait('@users').then((request) => {
       expect(request.requestBody.data.attributes.bio).to.eq(bioToSet);
     });

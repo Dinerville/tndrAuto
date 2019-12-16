@@ -1,0 +1,39 @@
+{
+  "name": "tinderauto",
+  "version": "1.0.0",
+  "description": "test automation for tinder",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress": "cypress open",
+    "lint": "eslint cypress/**/*.js",
+    "lint:fix": "eslint cypress/**/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dinerville/tndrAuto.git"
+  },
+  "keywords": [
+    "tinder",
+    "automation"
+  ],
+  "author": "d.naumov@a1qa.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dinerville/tndrAuto/issues"
+  },
+  "homepage": "https://github.com/Dinerville/tndrAuto#readme",
+  "dependencies": {
+    "cypress": "3.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-chai-friendly": "0.5.0",
+    "eslint-plugin-cypress": "2.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}
